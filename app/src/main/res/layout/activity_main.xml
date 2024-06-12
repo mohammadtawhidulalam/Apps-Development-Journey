@@ -1,66 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <LinearLayout
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:padding="20dp"
+    >
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="vertical"
-        >
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button one"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button one"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button one"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button one"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button one"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button one"
-            />
+        android:text="Beauty Of Bangladesh"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:layout_marginBottom="10dp"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/bangladesh"
+        android:scaleType="centerCrop"
+        android:layout_marginVertical="5dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="While this past month in Bangladesh has been filled with attacks and political turmoil, American news only focuses on the negative aspects occurring in the country. While it is important to address the issues within a country and try to create solutions, it is also important to understand that a country and its citizens are not one-dimensional. In fact, there are many aspects of Bangladesh that are beautiful"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:gravity="start"
+        android:textSize="15sp"
+        />
 
-
-    </LinearLayout>
-
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click Here to Know More"
+        />
+</LinearLayout>

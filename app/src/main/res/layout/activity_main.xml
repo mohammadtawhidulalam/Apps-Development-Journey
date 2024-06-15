@@ -11,38 +11,45 @@
     android:padding="20dp"
     >
 
-    <TextView
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="300dp"
+       android:src="@drawable/bangladesh"
+       android:scaleType="centerCrop"
+       android:padding="20dp"
+       android:visibility="visible"
+       android:id="@+id/img"
+       />
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:background="#1e1f22"
-        android:textColor="#ffffff"
-        android:id="@+id/tvDiplay"
+        android:text="Show"
+        android:textSize="20sp"
+        android:padding="15dp"
+        android:id="@+id/bShow"
         />
 
     <Button
-        android:id="@+id/bAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ADD ONE"
+        android:text="Gone"
+        android:textSize="20sp"
+        android:padding="15dp"
+        android:id="@+id/bGone"
+
         />
 
     <Button
-        android:id="@+id/bSub"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SUB ONE"
+        android:text="Toast"
+        android:textSize="20sp"
+        android:padding="15dp"
+        android:id="@+id/bToast"
+
         />
 
-    <Button
-        android:id="@+id/bReset"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RESET"
-        />
 
 
 </LinearLayout>

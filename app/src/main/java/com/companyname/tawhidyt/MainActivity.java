@@ -3,7 +3,9 @@ package com.companyname.tawhidyt;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,10 +15,12 @@ import androidx.core.view.WindowInsetsCompat;
 
 import org.w3c.dom.Text;
 
+import java.time.Duration;
+
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvDisplay;
-    Button bAdd, bSub, bReset;
+    ImageView img;
+    Button bShow, bGone, bToast;
     int count=0;
 
     @Override
@@ -30,36 +34,32 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-tvDisplay = findViewById(R.id.tvDiplay);
-bAdd = findViewById(R.id.bAdd);
-bSub = findViewById(R.id.bSub);
-bReset = findViewById(R.id.bReset);
+img = findViewById(R.id.img);
+bShow = findViewById(R.id.bShow);
+bGone = findViewById(R.id.bGone);
+bToast = findViewById(R.id.bToast);
 
 //        .................................................................
 
-        bAdd.setOnClickListener(new View.OnClickListener() {
+        bShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count++;
-                tvDisplay.setText(""+count);
+
+                img.setVisibility(View.VISIBLE);
             }
         });
 
-        bSub.setOnClickListener(new View.OnClickListener() {
+        bGone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count--;
-                tvDisplay.setText(""+count);
-
+            img.setVisibility(View.GONE);
             }
         });
 
-        bReset.setOnClickListener(new View.OnClickListener() {
+        bToast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count =0;
-                tvDisplay.setText(""+count);
-
+                Toast.makeText(MainActivity.this,"Toast is showing",Toast.LENGTH_LONG).show();
             }
         });
 

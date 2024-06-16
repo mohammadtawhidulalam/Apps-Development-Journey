@@ -3,6 +3,7 @@ package com.companyname.tawhidyt;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,10 +20,7 @@ import org.w3c.dom.Text;
 import java.time.Duration;
 
 public class MainActivity extends AppCompatActivity {
-
-    ImageView img;
-    Button bShow, bGone, bToast,goNextPage;
-    int count=0;
+     WebView webView;
 
 
     @Override
@@ -36,44 +34,11 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-img = findViewById(R.id.img);
-bShow = findViewById(R.id.bShow);
-bGone = findViewById(R.id.bGone);
-bToast = findViewById(R.id.bToast);
-goNextPage = findViewById(R.id.goNextPage);
+        webView = findViewById(R.id.webView);
 
-//        .................................................................
+        webView.getSettings().setJavaScriptEnabled(true);
 
-        bShow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                img.setVisibility(View.VISIBLE);
-            }
-        });
-
-        bGone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            img.setVisibility(View.GONE);
-            }
-        });
-
-        bToast.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Toast is showing",Toast.LENGTH_LONG).show();
-            }
-        });
-
-        goNextPage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent=new Intent(MainActivity.this, SecondActivity.class);
-                startActivity(myIntent);
-            }
-        });
-
+        webView.loadUrl("https://www.youtube.com/embed/dAxj0HBnxCU");
 
 
     }

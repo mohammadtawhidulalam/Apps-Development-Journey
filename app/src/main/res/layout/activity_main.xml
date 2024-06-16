@@ -11,53 +11,11 @@
     android:padding="20dp"
     >
 
-   <ImageView
+   <WebView
+       android:id="@+id/webView"
        android:layout_width="match_parent"
-       android:layout_height="300dp"
-       android:src="@drawable/bangladesh"
-       android:scaleType="centerCrop"
-       android:padding="20dp"
-       android:visibility="visible"
-       android:id="@+id/img"
+       android:layout_height="match_parent"
        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Show"
-        android:textSize="20sp"
-        android:padding="15dp"
-        android:id="@+id/bShow"
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Gone"
-        android:textSize="20sp"
-        android:padding="15dp"
-        android:id="@+id/bGone"
-
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Toast"
-        android:textSize="20sp"
-        android:padding="15dp"
-        android:id="@+id/bToast"
-
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Go To next"
-        android:textSize="20sp"
-        android:padding="14dp"
-        android:id="@+id/goNextPage"
-        />
 
 
 

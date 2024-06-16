@@ -35,36 +35,9 @@ LinearLayout laySong1, laySong2, laySong3;
             return insets;
         });
 
-        laySong1 = findViewById(R.id.laySong1);
-        laySong2 = findViewById(R.id.laySong2);
-        laySong3 = findViewById(R.id.laySong3);
 
-        laySong1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                VideoPlayer.video_url = "https://www.youtube.com/embed/dtpoeDHQojA";
-                Intent myIntent = new Intent(MainActivity.this,VideoPlayer.class);
-                startActivity(myIntent);
-            }
-        });
 
-        laySong2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                VideoPlayer.video_url = "https://www.youtube.com/embed/_nZhmY9J0vA";
-                Intent myIntent = new Intent(MainActivity.this,VideoPlayer.class);
-                startActivity(myIntent);
-            }
-        });
 
-        laySong3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                VideoPlayer.video_url = "https://www.youtube.com/embed/AR2CVMbyKcY";
-                Intent myIntent = new Intent(MainActivity.this,VideoPlayer.class);
-                startActivity(myIntent);
-            }
-        });
 
 
 

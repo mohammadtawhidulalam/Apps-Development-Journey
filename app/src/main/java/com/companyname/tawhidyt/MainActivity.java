@@ -6,6 +6,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,9 +21,8 @@ import org.w3c.dom.Text;
 import java.time.Duration;
 
 public class MainActivity extends AppCompatActivity {
-    Button song1, song2, song3;
 
-
+LinearLayout laySong1, laySong2, laySong3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,36 +35,38 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        song1 = findViewById(R.id.song1);
-        song2 = findViewById(R.id.song2);
-        song3 = findViewById(R.id.song3);
+        laySong1 = findViewById(R.id.laySong1);
+        laySong2 = findViewById(R.id.laySong2);
+        laySong3 = findViewById(R.id.laySong3);
 
-        song1.setOnClickListener(new View.OnClickListener() {
+        laySong1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VideoPlayer.video_url = "https://www.youtube.com/embed/dAxj0HBnxCU";
+                VideoPlayer.video_url = "https://www.youtube.com/embed/dtpoeDHQojA";
                 Intent myIntent = new Intent(MainActivity.this,VideoPlayer.class);
                 startActivity(myIntent);
             }
         });
 
-        song2.setOnClickListener(new View.OnClickListener() {
+        laySong2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VideoPlayer.video_url = "https://www.youtube.com/embed/dAxj0HBnxCU";
+                VideoPlayer.video_url = "https://www.youtube.com/embed/_nZhmY9J0vA";
                 Intent myIntent = new Intent(MainActivity.this,VideoPlayer.class);
                 startActivity(myIntent);
             }
         });
 
-        song3.setOnClickListener(new View.OnClickListener() {
+        laySong3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VideoPlayer.video_url = "https://www.youtube.com/embed/dAxj0HBnxCU";
+                VideoPlayer.video_url = "https://www.youtube.com/embed/AR2CVMbyKcY";
                 Intent myIntent = new Intent(MainActivity.this,VideoPlayer.class);
                 startActivity(myIntent);
             }
         });
+
+
 
 
 

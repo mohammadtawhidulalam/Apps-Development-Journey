@@ -1,5 +1,6 @@
 package com.companyname.tawhidyt;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,8 +21,9 @@ import java.time.Duration;
 public class MainActivity extends AppCompatActivity {
 
     ImageView img;
-    Button bShow, bGone, bToast;
+    Button bShow, bGone, bToast,goNextPage;
     int count=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ img = findViewById(R.id.img);
 bShow = findViewById(R.id.bShow);
 bGone = findViewById(R.id.bGone);
 bToast = findViewById(R.id.bToast);
+goNextPage = findViewById(R.id.goNextPage);
 
 //        .................................................................
 
@@ -62,6 +65,15 @@ bToast = findViewById(R.id.bToast);
                 Toast.makeText(MainActivity.this,"Toast is showing",Toast.LENGTH_LONG).show();
             }
         });
+
+        goNextPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent=new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(myIntent);
+            }
+        });
+
 
 
     }

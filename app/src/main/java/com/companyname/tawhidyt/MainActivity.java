@@ -20,7 +20,8 @@ import org.w3c.dom.Text;
 import java.time.Duration;
 
 public class MainActivity extends AppCompatActivity {
-     WebView webView;
+    Button song1, song2, song3;
+
 
 
     @Override
@@ -34,11 +35,41 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        webView = findViewById(R.id.webView);
+        song1 = findViewById(R.id.song1);
+        song2 = findViewById(R.id.song2);
+        song3 = findViewById(R.id.song3);
 
-        webView.getSettings().setJavaScriptEnabled(true);
+        song1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                VideoPlayer.video_url = "https://www.youtube.com/embed/dAxj0HBnxCU";
+                Intent myIntent = new Intent(MainActivity.this,VideoPlayer.class);
+                startActivity(myIntent);
+            }
+        });
 
-        webView.loadUrl("https://www.youtube.com/embed/dAxj0HBnxCU");
+        song2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                VideoPlayer.video_url = "https://www.youtube.com/embed/dAxj0HBnxCU";
+                Intent myIntent = new Intent(MainActivity.this,VideoPlayer.class);
+                startActivity(myIntent);
+            }
+        });
+
+        song3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                VideoPlayer.video_url = "https://www.youtube.com/embed/dAxj0HBnxCU";
+                Intent myIntent = new Intent(MainActivity.this,VideoPlayer.class);
+                startActivity(myIntent);
+            }
+        });
+
+
+
+
+
 
 
     }
